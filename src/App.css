@@ -1,38 +1,97 @@
-.App {
+body {
+  background-color: #111;
+  color: white;
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  height: 9.5rem;
+}
+
+.navItem {
+  width: 10rem;
+  height: 100%;
+  font-size: 1.5rem;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navItem > hr {
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navItem > h1 {
+  margin:  0;
+}
+
+.navItem:hover > hr {
+  margin-top: 0.25rem;
+}
+
+.logo {
+  font-size: 2rem;
+  margin: 1rem 2rem 1rem 2rem;
+  text-align: left;
+}
+
+.logo > h1 {
+  margin: 0;
+  line-height: 80%;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.leaderboard {
+  flex: 1;
+  padding: 0 15% 0 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.games {
+  flex: 2;
+}
+
+th, td {
+  padding: 0.25rem;
+  font-size: 1.25rem;
+}
+
+th {
+  text-align: left;
+  background-color: #222;
+}
+
+.AddGame {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background-color: #222;
+  font-size: 1.25rem;
+  color: white;
 }
