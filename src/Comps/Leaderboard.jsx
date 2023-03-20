@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { ENDPOINT } from "../App";
 
 export const Leaderboard = ({forceUpdate}) => {
     const [players, setPlayers] = useState();
 
     useEffect(() => {
-        axios.get("http://localhost:5000/players")
+        axios.get(ENDPOINT+"/api/players")
             .then(res => {
                 setPlayers(res.data);
                 console.log(res.data);

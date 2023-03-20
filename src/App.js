@@ -10,6 +10,8 @@ function useForceUpdate() {
   return () => setValue(value => value+1);
 }
 
+export const ENDPOINT = "https://theboysbowling.herokuapp.com";
+
 function App() {
   return (
       <div className="App">

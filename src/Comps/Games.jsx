@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { ENDPOINT } from "../App";
 
 
 export const Games = ({forceUpdate}) => {
     const [games, setGames] = useState();
 
     useEffect(() => {
-        axios.get("http://localhost:5000/games-with-name")
+        axios.get(ENDPOINT+"/api/games-with-name")
             .then(res => {
                 console.log(res.data);
                 setGames(res.data);

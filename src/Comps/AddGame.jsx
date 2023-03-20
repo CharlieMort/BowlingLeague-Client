@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { ENDPOINT } from "../App";
 
 export const AddGame = () => {
     const [name, setName] = useState("");
@@ -9,7 +10,7 @@ export const AddGame = () => {
 
     function onSubmit(e) {
         e.preventDefault();
-        axios.post("http://localhost:5000/add-game", {
+        axios.post(ENDPOINT+"/api/add-game", {
             name:name, 
             scoreCard:scoreCard, 
             date:date,
